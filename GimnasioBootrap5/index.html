@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio FitLife</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Gimnasio FitLife</h1>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#info">Información</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cursos">Apuntarse a Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reservas">Reserva de Máquinas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <section id="carousel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </section>
+
+    <!-- Sections -->
+    <div class="container">
+        <section id="info" class="py-4">
+            <h2 class="text-center text-secondary">Sobre Nosotros</h2>
+            <p class="text-center">Bienvenido a FitLife, el mejor gimnasio para alcanzar tus objetivos. Ofrecemos instalaciones de primera calidad y una variedad de clases para todos los niveles.</p>
+        </section>
+
+        <section id="cursos" class="py-4">
+            <h2 class="text-center text-secondary">Apuntarse a Cursos</h2>
+            <p class="text-center">Selecciona el curso que te interesa y regístrate para reservar tu lugar.</p>
+            <form class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <label for="curso" class="form-label">Elige un curso:</label>
+                    <select id="curso" name="curso" class="form-select">
+                        <option value="yoga">Yoga</option>
+                        <option value="zumba">Zumba</option>
+                        <option value="crossfit">CrossFit</option>
+                        <option value="pilates">Pilates</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Apuntarse</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="reservas" class="py-4">
+            <h2 class="text-center text-secondary">Reserva de Máquinas</h2>
+            <p class="text-center">Reserva tu máquina para asegurarte de que esté disponible cuando llegues.</p>
+            <form class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <label for="maquina" class="form-label">Elige una máquina:</label>
+                    <select id="maquina" name="maquina" class="form-select">
+                        <option value="cinta">Cinta de Correr</option>
+                        <option value="bicicleta">Bicicleta Estática</option>
+                        <option value="pesas">Zona de Pesas</option>
+                        <option value="eliptica">Elíptica</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="hora" class="form-label">Hora de Reserva:</label>
+                    <input type="time" id="hora" name="hora" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Reservar</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="registro" class="py-4">
+            <h2 class="text-center text-secondary">Registro de Usuario</h2>
+            <form class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="contraseña" class="form-label">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Gimnasio FitLife. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
